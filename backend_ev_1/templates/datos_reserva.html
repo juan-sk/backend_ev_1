@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Pagina datos reserva {% endblock%}
+
+{% block body %}
+
+<h1>datos del la reserva</h1>
+
+<p>Nombre: {{r.nombre}}</p>
+<p>Rut: {{r.rut}}</p>
+<p>Sexo: {{r.sexo}}</p>
+<p>Nacimiento: {{r.nacimiento}}</p>
+<p>Reserva: {{r.reserva}}</p>
+<p>telefono Contacto: {{r.telefono_contacto}}</p>
+<p>Nro Habitacion: {{r.nro_habitacion}}</p>
+
+<h2>Todos los datos se guardaron correctamente</h2>
+
+
+{% endblock %}

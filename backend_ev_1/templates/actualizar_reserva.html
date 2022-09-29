@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Pagina actualizar reserva {% endblock%}
+
+{% block body %}
+<h1>Actualizar la su reserva {{id}}</h1>
+
+<form action="datosreserva" method="POST"> {% csrf_token %}
+    <table>
+        <tr>
+            <td>Nombre Completo</td>
+            <td>
+                <input type="text" name="txtnombre" placeholder="Ingrese nombre completo"  value = "alan brito"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Rut</td>
+            <td>
+                <input type="text" name="txtrut" placeholder="Ingrese su rut" value = "11.111.111-1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Sexo</td>
+            <td>
+                <input type="text" name="txtSexo" placeholder="Ingrese su Sexo" value = "masculino" />
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha Nacimiento</td>
+            <td>
+                <input type="text" name="txtfechanacimiento" placeholder="Ingrese su fecha de Nacimiento" value = "22-02-2022"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha Reserva</td>
+            <td>
+                <input type="text" name="txtfechareserva" placeholder="Ingrese la Fecha de Reserva" value = "02-02-2023" />
+            </td>
+        </tr>
+        <tr>
+            <td>Telefono de Contacto</td>
+            <td>
+                <input type="text" name="txttelefonocontacto" placeholder="Ingrese el telefono de contacto" value = "+569 9999 9999" />
+            </td>
+        </tr>
+        <tr>
+            <td>Nro Habitacion</td>
+            <td>
+                <input type="text" name="txthabitacoin" placeholder="Ingrese el numero de habitacion" value = "420"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Actualizar" />
+            </td>
+            <td>
+                <input type="reset" value="Cancelar" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}

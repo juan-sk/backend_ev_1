@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Pagina busqueda reserva {% endblock%}
+
+{% block body %}
+<h1>buscar reserva </h1>
+
+<form action="reservaporDefecto" method="GET">
+    <table>
+        <tr>
+            <td>id Reserva</td>
+            <td>
+                <input type="text" name="txtid" placeholder="Ingrese id reserva" />
+            </td>
+        </tr>
+      
+        <tr>
+            <td>
+                <input type="submit" value="buscar" />
+            </td>
+            <td>
+                <input type="reset" value="Cancelar" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}

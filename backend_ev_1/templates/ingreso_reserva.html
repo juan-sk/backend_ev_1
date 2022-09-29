@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Pagina reserva {% endblock%}
+
+{% block body %}
+<h1>Ingrese la su reserva</h1>
+
+<form action="datosreserva" method="POST"> {% csrf_token %}
+    <table>
+        <tr>
+            <td>Nombre Completo</td>
+            <td>
+                <input type="text" name="txtnombre" placeholder="Ingrese nombre completo" />
+            </td>
+        </tr>
+        <tr>
+            <td>Rut</td>
+            <td>
+                <input type="text" name="txtrut" placeholder="Ingrese su rut" />
+            </td>
+        </tr>
+        <tr>
+            <td>Sexo</td>
+            <td>
+                <input type="text" name="txtSexo" placeholder="Ingrese su Sexo" />
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha Nacimiento</td>
+            <td>
+                <input type="text" name="txtfechanacimiento" placeholder="Ingrese su fecha de Nacimiento" />
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha Reserva</td>
+            <td>
+                <input type="text" name="txtfechareserva" placeholder="Ingrese la Fecha de Reserva" />
+            </td>
+        </tr>
+        <tr>
+            <td>Telefono de Contacto</td>
+            <td>
+                <input type="text" name="txttelefonocontacto" placeholder="Ingrese el telefono de contacto" />
+            </td>
+        </tr>
+        <tr>
+            <td>Nro Habitacion</td>
+            <td>
+                <input type="text" name="txthabitacoin" placeholder="Ingrese el numero de habitacion" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Enviar" />
+            </td>
+            <td>
+                <input type="reset" value="Cancelar" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}

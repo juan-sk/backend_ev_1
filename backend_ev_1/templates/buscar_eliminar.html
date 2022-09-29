@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block titulo %} Pagina eliminar reserva {% endblock%}
+
+{% block body %}
+<h1>buscar reserva a eliminar</h1>
+
+<form action="eliminarReserva" method="POST"> {% csrf_token %}
+    <table>
+        <tr>
+            <td>id Reserva</td>
+            <td>
+                <input type="text" name="txtid" placeholder="Ingrese id reserva" />
+            </td>
+        </tr>
+      
+        <tr>
+            <td>
+                <input type="submit" value="eliminar" />
+            </td>
+            <td>
+                <input type="reset" value="Cancelar" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+{% endblock %}
